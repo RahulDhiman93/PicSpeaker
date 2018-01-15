@@ -44,15 +44,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pic-Speaker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wty-Cj-62Q">
-                                <rect key="frame" x="16" y="50" width="343" height="50"/>
+                                <rect key="frame" x="77" y="50" width="221" height="50"/>
                                 <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPB-Tf-3dz">
+                                <rect key="frame" x="313" y="55" width="46" height="29"/>
+                                <state key="normal" image="cancel">
+                                    <color key="titleColor" red="0.01965268782" green="0.01965268782" blue="0.01965268782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6H-cT-AQF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75178108809999999" green="0.75178108809999999" blue="0.75178108809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="22B-oH-fDd" firstAttribute="top" secondItem="BHL-h2-JOD" secondAttribute="bottom" constant="16" id="4Sp-zT-z2p"/>
+                            <constraint firstItem="wty-Cj-62Q" firstAttribute="top" secondItem="tPB-Tf-3dz" secondAttribute="bottom" constant="-34" id="6EV-vX-aAi"/>
                             <constraint firstItem="xeD-HX-ZPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Cty-Ed-okG"/>
                             <constraint firstItem="22B-oH-fDd" firstAttribute="leading" secondItem="xeD-HX-ZPT" secondAttribute="trailing" constant="251" id="DCe-jJ-lbn"/>
                             <constraint firstItem="BHL-h2-JOD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="Ed9-KC-Wlg"/>
@@ -61,18 +71,22 @@
                             <constraint firstItem="wty-Cj-62Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="UEj-ve-q4x"/>
                             <constraint firstItem="22B-oH-fDd" firstAttribute="leading" secondItem="xeD-HX-ZPT" secondAttribute="trailing" constant="251" id="b8s-zc-IWI"/>
                             <constraint firstItem="BHL-h2-JOD" firstAttribute="top" secondItem="wty-Cj-62Q" secondAttribute="bottom" constant="8" id="e3N-Fs-hs9"/>
+                            <constraint firstItem="tPB-Tf-3dz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="55" id="eGa-rJ-jWW"/>
                             <constraint firstItem="BHL-h2-JOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fpG-3o-cgH"/>
-                            <constraint firstItem="wty-Cj-62Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mop-1x-sxr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wty-Cj-62Q" secondAttribute="trailing" constant="16" id="nKe-UL-RUZ"/>
+                            <constraint firstItem="wty-Cj-62Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="mop-1x-sxr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wty-Cj-62Q" secondAttribute="trailing" constant="77" id="nKe-UL-RUZ"/>
                             <constraint firstItem="xeD-HX-ZPT" firstAttribute="top" secondItem="BHL-h2-JOD" secondAttribute="bottom" constant="16" id="nOk-AC-tPX"/>
                             <constraint firstItem="BHL-h2-JOD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="108" id="sWv-9M-cri"/>
+                            <constraint firstItem="tPB-Tf-3dz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="313" id="toN-JN-fRP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BHL-h2-JOD" secondAttribute="bottom" constant="66" id="uaf-Aw-gYC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tPB-Tf-3dz" secondAttribute="trailing" constant="16" id="waY-FX-N6R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="22B-oH-fDd" secondAttribute="trailing" constant="16" id="wxE-zx-ik4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="CameraView" destination="22B-oH-fDd" id="QBB-Dr-G0s"/>
+                        <outlet property="clear" destination="tPB-Tf-3dz" id="U2a-RE-5iT"/>
                         <outlet property="gallery" destination="xeD-HX-ZPT" id="Ybt-2H-HHe"/>
                         <outlet property="picView" destination="BHL-h2-JOD" id="ipB-jp-CYV"/>
                     </connections>
@@ -84,6 +98,7 @@
     </scenes>
     <resources>
         <image name="camera" width="30" height="30"/>
+        <image name="cancel" width="30" height="30"/>
         <image name="gallery" width="30" height="30"/>
     </resources>
 </document>
