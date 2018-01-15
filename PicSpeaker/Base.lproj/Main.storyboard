@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AcademyEngraved.ttf">
+            <string>AcademyEngravedLetPlain</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--PicViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="PicViewController" id="BYZ-38-t0r" customClass="PicSelectViewController" customModule="PicSpeaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BHL-h2-JOD">
+                                <rect key="frame" x="16" y="108" width="343" height="493"/>
+                                <color key="backgroundColor" red="0.62336058940000005" green="0.62336058940000005" blue="0.62336058940000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeD-HX-ZPT">
+                                <rect key="frame" x="16" y="617" width="42" height="30"/>
+                                <state key="normal" image="gallery"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22B-oH-fDd">
+                                <rect key="frame" x="309" y="617" width="50" height="30"/>
+                                <state key="normal" title="cc" image="camera">
+                                    <color key="titleColor" red="0.75178108809999999" green="0.75178108809999999" blue="0.75178108809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pic-Speaker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wty-Cj-62Q">
+                                <rect key="frame" x="16" y="50" width="343" height="50"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75178108809999999" green="0.75178108809999999" blue="0.75178108809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="22B-oH-fDd" firstAttribute="top" secondItem="BHL-h2-JOD" secondAttribute="bottom" constant="16" id="4Sp-zT-z2p"/>
+                            <constraint firstItem="xeD-HX-ZPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Cty-Ed-okG"/>
+                            <constraint firstItem="22B-oH-fDd" firstAttribute="leading" secondItem="xeD-HX-ZPT" secondAttribute="trailing" constant="251" id="DCe-jJ-lbn"/>
+                            <constraint firstItem="BHL-h2-JOD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="Ed9-KC-Wlg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xeD-HX-ZPT" secondAttribute="bottom" constant="20" id="GTX-aV-gm2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="22B-oH-fDd" secondAttribute="bottom" constant="20" id="MSg-4V-4kK"/>
+                            <constraint firstItem="wty-Cj-62Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="UEj-ve-q4x"/>
+                            <constraint firstItem="22B-oH-fDd" firstAttribute="leading" secondItem="xeD-HX-ZPT" secondAttribute="trailing" constant="251" id="b8s-zc-IWI"/>
+                            <constraint firstItem="BHL-h2-JOD" firstAttribute="top" secondItem="wty-Cj-62Q" secondAttribute="bottom" constant="8" id="e3N-Fs-hs9"/>
+                            <constraint firstItem="BHL-h2-JOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fpG-3o-cgH"/>
+                            <constraint firstItem="wty-Cj-62Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mop-1x-sxr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wty-Cj-62Q" secondAttribute="trailing" constant="16" id="nKe-UL-RUZ"/>
+                            <constraint firstItem="xeD-HX-ZPT" firstAttribute="top" secondItem="BHL-h2-JOD" secondAttribute="bottom" constant="16" id="nOk-AC-tPX"/>
+                            <constraint firstItem="BHL-h2-JOD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="108" id="sWv-9M-cri"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BHL-h2-JOD" secondAttribute="bottom" constant="66" id="uaf-Aw-gYC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="22B-oH-fDd" secondAttribute="trailing" constant="16" id="wxE-zx-ik4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="CameraView" destination="22B-oH-fDd" id="QBB-Dr-G0s"/>
+                        <outlet property="gallery" destination="xeD-HX-ZPT" id="Ybt-2H-HHe"/>
+                        <outlet property="picView" destination="BHL-h2-JOD" id="ipB-jp-CYV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="30" height="30"/>
+        <image name="gallery" width="30" height="30"/>
+    </resources>
+</document>
