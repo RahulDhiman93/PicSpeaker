@@ -15,6 +15,7 @@
 		08659973200D0B19002F99B4 /* PicSpeakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08659972200D0B19002F99B4 /* PicSpeakerTests.swift */; };
 		0865997E200D0B19002F99B4 /* PicSpeakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865997D200D0B19002F99B4 /* PicSpeakerUITests.swift */; };
 		08659990200D13AD002F99B4 /* PicSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865998F200D13AD002F99B4 /* PicSelectViewController.swift */; };
+		086D31C3200DCC9D007616F6 /* PicSpeakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086D31C2200DCC9D007616F6 /* PicSpeakerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0865997D200D0B19002F99B4 /* PicSpeakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicSpeakerUITests.swift; sourceTree = "<group>"; };
 		0865997F200D0B19002F99B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0865998F200D13AD002F99B4 /* PicSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicSelectViewController.swift; sourceTree = "<group>"; };
+		086D31C2200DCC9D007616F6 /* PicSpeakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicSpeakerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				0865995A200D0B19002F99B4 /* AppDelegate.swift */,
 				0865998F200D13AD002F99B4 /* PicSelectViewController.swift */,
+				086D31C2200DCC9D007616F6 /* PicSpeakerViewController.swift */,
 				0865995E200D0B19002F99B4 /* Main.storyboard */,
 				08659964200D0B19002F99B4 /* Assets.xcassets */,
 				08659966200D0B19002F99B4 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				0865995B200D0B19002F99B4 /* AppDelegate.swift in Sources */,
 				08659963200D0B19002F99B4 /* PicSpeaker.xcdatamodeld in Sources */,
 				08659990200D13AD002F99B4 /* PicSelectViewController.swift in Sources */,
+				086D31C3200DCC9D007616F6 /* PicSpeakerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

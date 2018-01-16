@@ -15,6 +15,7 @@ class PicSelectViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var gallery: UIButton!
     @IBOutlet weak var CameraView: UIButton!
     @IBOutlet weak var clear: UIButton!
+    @IBOutlet weak var checked: UIButton!
     
    
     
@@ -31,6 +32,7 @@ class PicSelectViewController: UIViewController, UIImagePickerControllerDelegate
             CameraView.isEnabled = false
         }
         self.clear.isHidden = true
+        self.checked.isHidden = true
     
         
     }
@@ -41,6 +43,10 @@ class PicSelectViewController: UIViewController, UIImagePickerControllerDelegate
         
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             picView.image = image
+            self.clear.isHidden = false
+            self.checked.isHidden = false
+            self.clear.alpha = 1.5
+        
         }
         
         dismiss(animated: true, completion: nil)
@@ -65,14 +71,12 @@ class PicSelectViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func PicFromGallery(_ sender: Any) {
         pickIT(.photoLibrary)
-        self.clear.isHidden = false
-        self.clear.alpha = 1.5
+        
     }
     
     @IBAction func PicFromCamer(_ sender: Any) {
         pickIT(.camera)
-        self.clear.isHidden = false
-        self.clear.alpha = 1.5
+        
     }
     
     @IBAction func cancelit(_ sender: Any) {
