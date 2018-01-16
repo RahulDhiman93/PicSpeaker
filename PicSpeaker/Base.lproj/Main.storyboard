@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VmL-j7-sQB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -64,6 +64,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bu-LA-1g8">
                                 <rect key="frame" x="31" y="55" width="30" height="30"/>
                                 <state key="normal" image="checked"/>
+                                <connections>
+                                    <action selector="correct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sS0-Ky-63D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75178108809999999" green="0.75178108809999999" blue="0.75178108809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -101,6 +104,7 @@
                         <outlet property="clear" destination="tPB-Tf-3dz" id="U2a-RE-5iT"/>
                         <outlet property="gallery" destination="xeD-HX-ZPT" id="Ybt-2H-HHe"/>
                         <outlet property="picView" destination="BHL-h2-JOD" id="ipB-jp-CYV"/>
+                        <segue destination="VmL-j7-sQB" kind="show" identifier="ss" id="9HG-da-07Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,6 +136,13 @@
                                     <action selector="TTS:" destination="VmL-j7-sQB" eventType="touchUpInside" id="5Gh-zh-fIF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuQ-qM-Vnb">
+                                <rect key="frame" x="172" y="37" width="30" height="30"/>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="VmL-j7-sQB" eventType="touchUpInside" id="YrU-3u-5YJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75178108809999999" green="0.75178108809999999" blue="0.75178108809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -139,11 +150,15 @@
                             <constraint firstItem="gNu-T6-Ukm" firstAttribute="top" secondItem="fGf-oW-wsr" secondAttribute="bottom" constant="58" id="9Wp-jy-hnS"/>
                             <constraint firstItem="xNF-eW-iPs" firstAttribute="leading" secondItem="Xra-bU-YIV" secondAttribute="leading" constant="153" id="BaB-cr-Ttf"/>
                             <constraint firstItem="Xra-bU-YIV" firstAttribute="bottom" secondItem="gNu-T6-Ukm" secondAttribute="bottom" constant="122" id="DZ1-rW-8od"/>
+                            <constraint firstItem="fGf-oW-wsr" firstAttribute="top" secondItem="MuQ-qM-Vnb" secondAttribute="bottom" constant="8" id="FyX-GB-mdC"/>
+                            <constraint firstItem="MuQ-qM-Vnb" firstAttribute="leading" secondItem="Xra-bU-YIV" secondAttribute="leading" constant="172" id="IQh-Bb-Wee"/>
                             <constraint firstItem="xNF-eW-iPs" firstAttribute="top" secondItem="gNu-T6-Ukm" secondAttribute="bottom" constant="28" id="Msz-ez-ugT"/>
+                            <constraint firstItem="Xra-bU-YIV" firstAttribute="trailing" secondItem="MuQ-qM-Vnb" secondAttribute="trailing" constant="173" id="UCJ-rQ-3GN"/>
                             <constraint firstItem="Xra-bU-YIV" firstAttribute="trailing" secondItem="gNu-T6-Ukm" secondAttribute="trailing" constant="16" id="eeP-mb-HH3"/>
                             <constraint firstItem="Xra-bU-YIV" firstAttribute="bottom" secondItem="fGf-oW-wsr" secondAttribute="bottom" constant="352" id="hrT-aC-ATh"/>
                             <constraint firstItem="Xra-bU-YIV" firstAttribute="bottom" secondItem="xNF-eW-iPs" secondAttribute="bottom" constant="28" id="oqt-v2-SI0"/>
                             <constraint firstItem="fGf-oW-wsr" firstAttribute="top" secondItem="Xra-bU-YIV" secondAttribute="top" constant="55" id="qiw-nF-ZeQ"/>
+                            <constraint firstItem="MuQ-qM-Vnb" firstAttribute="top" secondItem="Xra-bU-YIV" secondAttribute="top" constant="17" id="sSa-KD-kyx"/>
                             <constraint firstItem="Xra-bU-YIV" firstAttribute="trailing" secondItem="xNF-eW-iPs" secondAttribute="trailing" constant="153" id="tXr-Ms-IyH"/>
                             <constraint firstItem="Xra-bU-YIV" firstAttribute="trailing" secondItem="fGf-oW-wsr" secondAttribute="trailing" constant="16" id="uaT-BR-j0n"/>
                             <constraint firstItem="fGf-oW-wsr" firstAttribute="leading" secondItem="Xra-bU-YIV" secondAttribute="leading" constant="16" id="wiy-VZ-fNE"/>

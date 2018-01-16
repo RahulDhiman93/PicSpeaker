@@ -19,6 +19,11 @@ class PicSpeakerViewController: UIViewController {
     
     @IBOutlet weak var texttospeech: UIButton!
     
+    
+    var imageee:UIImage? = nil
+    var textwith:String = ""
+    
+    
     let synth = AVSpeechSynthesizer()
     var myUtterance = AVSpeechUtterance(string: "")
     
@@ -33,6 +38,10 @@ class PicSpeakerViewController: UIViewController {
         self.picture.clipsToBounds = true
         self.textfieldview.clipsToBounds = true
         self.textfieldview.text = "My name is Rahul"
+        
+        if let image = imageee {
+            self.picture.image = image
+        }
     }
 
     @IBAction func TTS(_ sender: Any) {
@@ -41,5 +50,8 @@ class PicSpeakerViewController: UIViewController {
         synth.speak(myUtterance)
         }
     
+    @IBAction func cancel(_ sender: Any) {
+    dismiss(animated: true, completion: nil)
+    }
     
 }

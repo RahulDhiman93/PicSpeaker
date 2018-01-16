@@ -71,6 +71,7 @@ class PicSelectViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func PicFromGallery(_ sender: Any) {
         pickIT(.photoLibrary)
+       
         
     }
     
@@ -85,5 +86,19 @@ class PicSelectViewController: UIViewController, UIImagePickerControllerDelegate
         self.clear.isHidden = true
         
     }
+    @IBAction func correct(_ sender: Any) {
+        performSegue(withIdentifier: "ss", sender: self.picView.image)
+        
+        }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.picView.image = nil
+        self.checked.isHidden = true
+        self.clear.isHidden = true
+        let sg = segue.destination as! PicSpeakerViewController
+        sg.imageee = sender as? UIImage
+    }
+    
     
 }
